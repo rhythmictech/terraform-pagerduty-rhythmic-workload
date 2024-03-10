@@ -1,0 +1,17 @@
+lambda_function.*
+
+#  Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# .tfvars files
+*.tfvars
+
+# macs
+.DS_Store
+
+# temp folders
+tmp
