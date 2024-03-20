@@ -56,6 +56,7 @@ No modules.
 | [pagerduty_slack_connection.notifications](https://registry.terraform.io/providers/PagerDuty/pagerduty/latest/docs/resources/slack_connection) | resource |
 | [pagerduty_business_service.customer](https://registry.terraform.io/providers/PagerDuty/pagerduty/latest/docs/data-sources/business_service) | data source |
 | [pagerduty_escalation_policy.engineering](https://registry.terraform.io/providers/PagerDuty/pagerduty/latest/docs/data-sources/escalation_policy) | data source |
+| [pagerduty_escalation_policy.engineering_quarantine](https://registry.terraform.io/providers/PagerDuty/pagerduty/latest/docs/data-sources/escalation_policy) | data source |
 | [pagerduty_extension_schema.jira](https://registry.terraform.io/providers/PagerDuty/pagerduty/latest/docs/data-sources/extension_schema) | data source |
 | [pagerduty_team.engineering](https://registry.terraform.io/providers/PagerDuty/pagerduty/latest/docs/data-sources/team) | data source |
 | [pagerduty_vendor.datadog](https://registry.terraform.io/providers/PagerDuty/pagerduty/latest/docs/data-sources/vendor) | data source |
@@ -65,9 +66,12 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_customer_name"></a> [customer\_name](#input\_customer\_name) | Customer Name | `string` | n/a | yes |
+| <a name="input_enable_critical_quarantine"></a> [enable\_critical\_quarantine](#input\_enable\_critical\_quarantine) | Override to quarantine critical alerts | `bool` | `true` | no |
+| <a name="input_enable_quarantine"></a> [enable\_quarantine](#input\_enable\_quarantine) | Override to quarantine non-critical alerts | `bool` | `false` | no |
 | <a name="input_slack_engineering_alerts_channel"></a> [slack\_engineering\_alerts\_channel](#input\_slack\_engineering\_alerts\_channel) | The Slack channel ID for engineering alerts | `string` | n/a | yes |
 | <a name="input_slack_engineering_critical_alerts_channel"></a> [slack\_engineering\_critical\_alerts\_channel](#input\_slack\_engineering\_critical\_alerts\_channel) | The Slack channel ID for engineering critical alerts | `string` | n/a | yes |
 | <a name="input_slack_engineering_notifications_channel"></a> [slack\_engineering\_notifications\_channel](#input\_slack\_engineering\_notifications\_channel) | The Slack channel ID for engineering notifications | `string` | n/a | yes |
+| <a name="input_slack_engineering_quarantine_channel"></a> [slack\_engineering\_quarantine\_channel](#input\_slack\_engineering\_quarantine\_channel) | The Slack channel ID for engineering critical alerts | `string` | n/a | yes |
 | <a name="input_slack_workspace_id"></a> [slack\_workspace\_id](#input\_slack\_workspace\_id) | The Slack workspace ID | `string` | n/a | yes |
 | <a name="input_workload_name"></a> [workload\_name](#input\_workload\_name) | Workload Name | `string` | n/a | yes |
 
