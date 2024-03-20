@@ -1,5 +1,4 @@
 locals {
-  security_escalation_policy = var.enable_quarantine ? data.pagerduty_escalation_policy.security_quarantine.id : data.pagerduty_escalation_policy.security.id
   slack_engineering_critical_alerts_channel = var.enable_critical_quarantine ? var.slack_engineering_quarantine_channel : var.slack_engineering_critical_alerts_channel
 }
 

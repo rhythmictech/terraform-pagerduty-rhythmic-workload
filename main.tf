@@ -19,7 +19,7 @@ data "pagerduty_escalation_policy" "engineering" {
 }
 
 data "pagerduty_escalation_policy" "engineering_quarantine" {
-  name = "ZZ-Engineering Quarantine Policy"
+  name = "ZZ-Engineering Quarantine Notifications Policy"
 }
 
 locals {
