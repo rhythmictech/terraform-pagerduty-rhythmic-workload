@@ -1,9 +1,13 @@
+locals {
+  slack_engineering_notifications_channel = var.enable_quarantine ? var.slack_engineering_quarantine_channel : var.slack_engineering_notifications_channel
+}
+
 resource "pagerduty_service" "notifications" {
   name                    = "${var.workload_name} Notifications (${var.customer_name})"
   acknowledgement_timeout = 7200
   alert_creation          = "create_alerts_and_incidents"
   auto_resolve_timeout    = 86400
-  escalation_policy       = data.pagerduty_escalation_policy.engineering.id
+  escalation_policy       = local.engineering_escalation_policy
 
   incident_urgency_rule {
     type    = "constant"
@@ -25,7 +29,7 @@ resource "pagerduty_service_dependency" "notifications" {
 }
 
 resource "pagerduty_slack_connection" "notifications" {
-  channel_id        = var.slack_engineering_notifications_channel
+  channel_id        = local.slack_engineering_notifications_channel
   notification_type = "responder"
   source_id         = pagerduty_service.notifications.id
   source_type       = "service_reference"

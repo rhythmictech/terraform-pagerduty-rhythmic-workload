@@ -18,6 +18,15 @@ data "pagerduty_escalation_policy" "engineering" {
   name = "Engineering Notifications Policy"
 }
 
+data "pagerduty_escalation_policy" "engineering_quarantine" {
+  name = "ZZ-Engineering Quarantine Policy"
+}
+
+locals {
+  engineering_escalation_policy          = var.enable_quarantine ? data.pagerduty_escalation_policy.engineering_quarantine.id : data.pagerduty_escalation_policy.engineering.id
+  engineering_critical_escalation_policy = var.enable_critical_quarantine ? data.pagerduty_escalation_policy.engineering_quarantine.id : data.pagerduty_escalation_policy.engineering.id
+}
+
 resource "pagerduty_business_service" "workload" {
   name        = "${var.workload_name} - Workload Monitoring [${var.customer_name}]"
   description = "Workload Monitoring & Incident Response"
