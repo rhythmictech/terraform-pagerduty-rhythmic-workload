@@ -29,7 +29,7 @@ variable "slack_workspace_id" {
 }
 
 variable "enable_critical_quarantine" {
-  default     = true
+  default     = false
   description = "Override to quarantine critical alerts"
   type        = bool
 }
