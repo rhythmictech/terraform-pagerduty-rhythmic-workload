@@ -66,7 +66,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_customer_name"></a> [customer\_name](#input\_customer\_name) | Customer Name | `string` | n/a | yes |
-| <a name="input_enable_critical_quarantine"></a> [enable\_critical\_quarantine](#input\_enable\_critical\_quarantine) | Override to quarantine critical alerts | `bool` | `true` | no |
+| <a name="input_enable_critical_quarantine"></a> [enable\_critical\_quarantine](#input\_enable\_critical\_quarantine) | Override to quarantine critical alerts | `bool` | `false` | no |
 | <a name="input_enable_quarantine"></a> [enable\_quarantine](#input\_enable\_quarantine) | Override to quarantine non-critical alerts | `bool` | `false` | no |
 | <a name="input_slack_engineering_alerts_channel"></a> [slack\_engineering\_alerts\_channel](#input\_slack\_engineering\_alerts\_channel) | The Slack channel ID for engineering alerts | `string` | n/a | yes |
 | <a name="input_slack_engineering_critical_alerts_channel"></a> [slack\_engineering\_critical\_alerts\_channel](#input\_slack\_engineering\_critical\_alerts\_channel) | The Slack channel ID for engineering critical alerts | `string` | n/a | yes |
