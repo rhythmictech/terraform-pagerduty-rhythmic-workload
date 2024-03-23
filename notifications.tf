@@ -3,7 +3,7 @@ locals {
 }
 
 resource "pagerduty_service" "notifications" {
-  name                    = "${var.workload_name} Notifications (${var.customer_name})"
+  name                    = "${var.workload_name} Notifications [${var.customer_name}]"
   acknowledgement_timeout = 7200
   alert_creation          = "create_alerts_and_incidents"
   auto_resolve_timeout    = 86400
