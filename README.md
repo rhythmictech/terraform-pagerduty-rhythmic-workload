@@ -80,11 +80,17 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_alerts_datadog_integration_key"></a> [alerts\_datadog\_integration\_key](#output\_alerts\_datadog\_integration\_key) | PagerDuty Datadog Integration for alerts |
-| <a name="output_alerts_service_name"></a> [alerts\_service\_name](#output\_alerts\_service\_name) | PagerDuty service for alerts |
-| <a name="output_critical_alerts_datadog_integration_key"></a> [critical\_alerts\_datadog\_integration\_key](#output\_critical\_alerts\_datadog\_integration\_key) | PagerDuty Datadog Integration for critiacl alerts |
-| <a name="output_critical_service_id"></a> [critical\_service\_id](#output\_critical\_service\_id) | PagerDuty service for critical alerts |
+| <a name="output_alerts_datadog_mention"></a> [alerts\_datadog\_mention](#output\_alerts\_datadog\_mention) | PagerDuty Service Mention with proper formatting |
+| <a name="output_alerts_service_id"></a> [alerts\_service\_id](#output\_alerts\_service\_id) | PagerDuty service ID for alerts |
+| <a name="output_alerts_service_name"></a> [alerts\_service\_name](#output\_alerts\_service\_name) | PagerDuty service name for alerts |
+| <a name="output_critical_alerts_datadog_mention"></a> [critical\_alerts\_datadog\_mention](#output\_critical\_alerts\_datadog\_mention) | PagerDuty Service Mention with proper formatting |
+| <a name="output_critical_datadog_integration_key"></a> [critical\_datadog\_integration\_key](#output\_critical\_datadog\_integration\_key) | PagerDuty Datadog Integration for critiacl alerts |
+| <a name="output_critical_service_id"></a> [critical\_service\_id](#output\_critical\_service\_id) | PagerDuty service ID for critical alerts |
+| <a name="output_critical_service_name"></a> [critical\_service\_name](#output\_critical\_service\_name) | PagerDuty service name for critical alerts |
 | <a name="output_datadog_integrations"></a> [datadog\_integrations](#output\_datadog\_integrations) | All PagerDuty Datadog integrations |
+| <a name="output_notification_datadog_mention"></a> [notification\_datadog\_mention](#output\_notification\_datadog\_mention) | PagerDuty Service Mention with proper formatting |
 | <a name="output_notifications_datadog_integration_key"></a> [notifications\_datadog\_integration\_key](#output\_notifications\_datadog\_integration\_key) | PagerDuty Datadog Integration for notifications |
-| <a name="output_notifications_service_name"></a> [notifications\_service\_name](#output\_notifications\_service\_name) | PagerDuty service for notifications |
+| <a name="output_notifications_service_id"></a> [notifications\_service\_id](#output\_notifications\_service\_id) | PagerDuty service ID for notifications |
+| <a name="output_notifications_service_name"></a> [notifications\_service\_name](#output\_notifications\_service\_name) | PagerDuty service name for notifications |
 | <a name="output_pagerduty_services"></a> [pagerduty\_services](#output\_pagerduty\_services) | All PagerDuty services |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
