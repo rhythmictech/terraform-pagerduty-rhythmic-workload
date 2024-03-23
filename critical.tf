@@ -3,7 +3,7 @@ locals {
 }
 
 resource "pagerduty_service" "critical" {
-  name                    = "${var.workload_name} Critical Alerts [${var.customer_name}]"
+  name                    = "${var.workload_name} Critical Alerts (${var.customer_name})"
   acknowledgement_timeout = 7200
   alert_creation          = "create_alerts_and_incidents"
   auto_resolve_timeout    = 86400

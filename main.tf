@@ -28,7 +28,7 @@ locals {
 }
 
 resource "pagerduty_business_service" "workload" {
-  name        = "${var.workload_name} - Workload Monitoring [${var.customer_name}]"
+  name        = "${var.workload_name} - Workload Monitoring (${var.customer_name})"
   description = "Workload Monitoring & Incident Response"
   team        = data.pagerduty_team.engineering.id
 }
