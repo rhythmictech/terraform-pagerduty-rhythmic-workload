@@ -5,7 +5,7 @@ output "alerts_datadog_integration_key" {
 
 output "alerts_datadog_mention" {
   description = "PagerDuty Service Mention with proper formatting"
-  value       = "@pagerduty-${replace(pagerduty_service.alerts.name, "/[\\[\\]\\(\\) ]/g", "")}"
+  value       = "@pagerduty-${replace(pagerduty_service.alerts.name, "/[\\[\\]\\(\\) ]/", "")}"
 }
 
 output "alerts_service_id" {
