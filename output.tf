@@ -5,7 +5,7 @@ output "alerts_datadog_integration_key" {
 
 output "alerts_datadog_mention" {
   description = "PagerDuty Service Mention with proper formatting"
-  value       = "@pagerduty-${replace(pagerduty_service.alerts.name, "/[\\[\\]\\(\\){} ]/g", "")}"
+  value       = "@pagerduty-${replace(pagerduty_service.alerts.name, "/[\\[\\]\\(\\) ]/g", "")}"
 }
 
 output "alerts_service_id" {
@@ -25,7 +25,7 @@ output "critical_datadog_integration_key" {
 
 output "critical_datadog_mention" {
   description = "PagerDuty Service Mention with proper formatting"
-  value       = "@pagerduty-${replace(pagerduty_service.critical.name, "/[\\[\\]\\(\\){} ]/g", "")}"
+  value       = "@pagerduty-${replace(pagerduty_service.critical.name, "/[\\[\\]\\(\\) ]/g", "")}"
 }
 
 output "critical_service_id" {
@@ -45,7 +45,7 @@ output "notifications_datadog_integration_key" {
 
 output "notification_datadog_mention" {
   description = "PagerDuty Service Mention with proper formatting"
-  value       = "@pagerduty-${replace(pagerduty_service.notifications.name, "/[\\[\\]\\(\\){} ]/g", "")}"
+  value       = "@pagerduty-${replace(pagerduty_service.notifications.name, "/[\\[\\]\\(\\) ]/g", "")}"
 }
 
 output "notifications_service_id" {
