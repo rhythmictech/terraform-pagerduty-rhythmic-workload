@@ -23,7 +23,7 @@ output "critical_datadog_integration_key" {
   value       = pagerduty_service_integration.critical.integration_key
 }
 
-output "critical_alerts_datadog_mention" {
+output "critical_datadog_mention" {
   description = "PagerDuty Service Mention with proper formatting"
   value       = "@pagerduty-${replace(pagerduty_service.critical.name, "/[\\[\\]\\(\\){} ]/g", "")}"
 }

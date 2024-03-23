@@ -83,8 +83,8 @@ No modules.
 | <a name="output_alerts_datadog_mention"></a> [alerts\_datadog\_mention](#output\_alerts\_datadog\_mention) | PagerDuty Service Mention with proper formatting |
 | <a name="output_alerts_service_id"></a> [alerts\_service\_id](#output\_alerts\_service\_id) | PagerDuty service ID for alerts |
 | <a name="output_alerts_service_name"></a> [alerts\_service\_name](#output\_alerts\_service\_name) | PagerDuty service name for alerts |
-| <a name="output_critical_alerts_datadog_mention"></a> [critical\_alerts\_datadog\_mention](#output\_critical\_alerts\_datadog\_mention) | PagerDuty Service Mention with proper formatting |
 | <a name="output_critical_datadog_integration_key"></a> [critical\_datadog\_integration\_key](#output\_critical\_datadog\_integration\_key) | PagerDuty Datadog Integration for critiacl alerts |
+| <a name="output_critical_datadog_mention"></a> [critical\_datadog\_mention](#output\_critical\_datadog\_mention) | PagerDuty Service Mention with proper formatting |
 | <a name="output_critical_service_id"></a> [critical\_service\_id](#output\_critical\_service\_id) | PagerDuty service ID for critical alerts |
 | <a name="output_critical_service_name"></a> [critical\_service\_name](#output\_critical\_service\_name) | PagerDuty service name for critical alerts |
 | <a name="output_datadog_integrations"></a> [datadog\_integrations](#output\_datadog\_integrations) | All PagerDuty Datadog integrations |
