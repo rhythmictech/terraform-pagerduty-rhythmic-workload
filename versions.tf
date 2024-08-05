@@ -8,12 +8,12 @@ terraform {
 
     datadog = {
       source  = "datadog/datadog"
-      version = "~>3.37"
+      version = "~>3.42"
     }
 
     pagerduty = {
       source  = "PagerDuty/pagerduty"
-      version = "~> 3.9"
+      version = "~> 3.15"
     }
   }
 }
