@@ -3,7 +3,7 @@ resource "pagerduty_service" "critical" {
   acknowledgement_timeout = 7200
   alert_creation          = "create_alerts_and_incidents"
   auto_resolve_timeout    = 86400
-  escalation_policy       = data.pagerduty_team.engineering.id
+  escalation_policy       = data.pagerduty_escalation_policy.engineering.id
 
   incident_urgency_rule {
     type    = "constant"
