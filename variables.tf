@@ -3,18 +3,18 @@ variable "customer_name" {
   type        = string
 }
 
-variable "slack_engineering_notifications_channel" {
-  description = "The Slack channel ID for engineering notifications"
+variable "slack_engineering_nonprod_channel" {
+  description = "The Slack channel ID for nonprod engineering alerts"
   type        = string
 }
 
-variable "slack_engineering_alerts_channel" {
-  description = "The Slack channel ID for engineering alerts"
+variable "slack_engineering_prod_channel" {
+  description = "The Slack channel ID for prod engineering alerts"
   type        = string
 }
 
-variable "slack_engineering_critical_alerts_channel" {
-  description = "The Slack channel ID for engineering critical alerts"
+variable "slack_engineering_critical_channel" {
+  description = "The Slack channel ID for critical engineering alerts"
   type        = string
 }
 
