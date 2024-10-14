@@ -1,19 +1,19 @@
-output "alerts_datadog_integration_key" {
+output "prod_datadog_integration_key" {
   description = "PagerDuty Datadog Integration for prod alerts"
   value       = pagerduty_service_integration.prod.integration_key
 }
 
-output "alerts_datadog_mention" {
+output "prod_datadog_mention" {
   description = "PagerDuty Service Mention with proper formatting"
   value       = "@pagerduty-${replace(pagerduty_service.prod.name, "/[\\[\\]\\(\\) ]/", "")}"
 }
 
-output "alerts_service_id" {
+output "prod_service_id" {
   description = "PagerDuty service ID for prod alerts"
   value       = pagerduty_service.prod.id
 }
 
-output "alerts_service_name" {
+output "prod_service_name" {
   description = "PagerDuty service name for prod alerts"
   value       = pagerduty_service.prod.name
 }
@@ -43,7 +43,7 @@ output "nonprod_datadog_integration_key" {
   value       = pagerduty_service_integration.nonprod.integration_key
 }
 
-output "notification_datadog_mention" {
+output "nonprod_datadog_mention" {
   description = "PagerDuty Service Mention with proper formatting"
   value       = "@pagerduty-${replace(pagerduty_service.nonprod.name, "/[\\[\\]\\(\\) ]/", "")}"
 }
