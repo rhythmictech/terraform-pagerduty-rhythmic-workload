@@ -4,7 +4,7 @@ variable "customer_name" {
 }
 
 variable "slack_engineering_nonprod_channel" {
-  description = "The Slack channel ID for nonprod engineering alerts"
+  description = "The Slack channel ID for non-prod engineering alerts"
   type        = string
 }
 

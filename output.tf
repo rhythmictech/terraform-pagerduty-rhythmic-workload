@@ -1,21 +1,21 @@
 output "alerts_datadog_integration_key" {
-  description = "PagerDuty Datadog Integration for alerts"
-  value       = pagerduty_service_integration.alerts.integration_key
+  description = "PagerDuty Datadog Integration for prod alerts"
+  value       = pagerduty_service_integration.prod.integration_key
 }
 
 output "alerts_datadog_mention" {
   description = "PagerDuty Service Mention with proper formatting"
-  value       = "@pagerduty-${replace(pagerduty_service.alerts.name, "/[\\[\\]\\(\\) ]/", "")}"
+  value       = "@pagerduty-${replace(pagerduty_service.prod.name, "/[\\[\\]\\(\\) ]/", "")}"
 }
 
 output "alerts_service_id" {
-  description = "PagerDuty service ID for alerts"
-  value       = pagerduty_service.alerts.id
+  description = "PagerDuty service ID for prod alerts"
+  value       = pagerduty_service.prod.id
 }
 
 output "alerts_service_name" {
-  description = "PagerDuty service name for alerts"
-  value       = pagerduty_service.alerts.name
+  description = "PagerDuty service name for prod alerts"
+  value       = pagerduty_service.prod.name
 }
 
 output "critical_datadog_integration_key" {
@@ -38,40 +38,40 @@ output "critical_service_name" {
   value       = pagerduty_service.critical.name
 }
 
-output "notifications_datadog_integration_key" {
-  description = "PagerDuty Datadog Integration for notifications"
-  value       = pagerduty_service_integration.notifications.integration_key
+output "nonprod_datadog_integration_key" {
+  description = "PagerDuty Datadog Integration for nonprod"
+  value       = pagerduty_service_integration.nonprod.integration_key
 }
 
 output "notification_datadog_mention" {
   description = "PagerDuty Service Mention with proper formatting"
-  value       = "@pagerduty-${replace(pagerduty_service.notifications.name, "/[\\[\\]\\(\\) ]/", "")}"
+  value       = "@pagerduty-${replace(pagerduty_service.nonprod.name, "/[\\[\\]\\(\\) ]/", "")}"
 }
 
-output "notifications_service_id" {
-  description = "PagerDuty service ID for notifications"
-  value       = pagerduty_service.notifications.id
+output "nonprod_service_id" {
+  description = "PagerDuty service ID for non-prod alerts"
+  value       = pagerduty_service.nonprod.id
 }
 
-output "notifications_service_name" {
-  description = "PagerDuty service name for notifications"
-  value       = pagerduty_service.notifications.name
+output "nonprod_service_name" {
+  description = "PagerDuty service name for non-prod alerts"
+  value       = pagerduty_service.nonprod.name
 }
 
 output "datadog_integrations" {
   description = "All PagerDuty Datadog integrations"
   value = {
     "alerts" = {
-      "name" = pagerduty_service.alerts.name
-      "key"  = pagerduty_service_integration.alerts.integration_key
+      "name" = pagerduty_service.prod.name
+      "key"  = pagerduty_service_integration.prod.integration_key
     }
     "critical" = {
       "name" = pagerduty_service.critical.name
       "key"  = pagerduty_service_integration.critical.integration_key
     }
-    "notifications" = {
-      "name" = pagerduty_service.notifications.name
-      "key"  = pagerduty_service_integration.notifications.integration_key
+    "nonprod" = {
+      "name" = pagerduty_service.nonprod.name
+      "key"  = pagerduty_service_integration.nonprod.integration_key
     }
   }
 }
@@ -79,8 +79,8 @@ output "datadog_integrations" {
 output "pagerduty_services" {
   description = "All PagerDuty services"
   value = [
-    pagerduty_service.alerts.id,
+    pagerduty_service.prod.id,
     pagerduty_service.critical.id,
-    pagerduty_service.notifications.id
+    pagerduty_service.nonprod.id
   ]
 }
