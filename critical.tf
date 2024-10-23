@@ -1,5 +1,5 @@
 resource "pagerduty_service" "critical" {
-  name                    = "${var.workload_name} Critical Alerts (${var.customer_name})"
+  name                    = "${var.workload_name} Alerts - Critical 24x7 (${var.customer_name})"
   acknowledgement_timeout = 7200
   alert_creation          = "create_alerts_and_incidents"
   auto_resolve_timeout    = 86400
@@ -25,7 +25,7 @@ resource "pagerduty_service_dependency" "critical" {
 }
 
 resource "pagerduty_slack_connection" "critical" {
-  channel_id        = var.slack_engineering_critical_alerts_channel
+  channel_id        = var.slack_engineering_critical_channel
   notification_type = "responder"
   source_id         = pagerduty_service.critical.id
   source_type       = "service_reference"
