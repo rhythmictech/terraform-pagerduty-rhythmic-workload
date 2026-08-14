@@ -18,15 +18,15 @@ Binds Datadog and PagerDuty
 ## Requirements
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 5.0 |
-| <a name="requirement_datadog"></a> [datadog](#requirement\_datadog) | ~>3.42 |
+| <a name="requirement_datadog"></a> [datadog](#requirement\_datadog) | >= 3.42, < 5.0 |
 | <a name="requirement_pagerduty"></a> [pagerduty](#requirement\_pagerduty) | ~> 3.15 |
 
 ## Providers
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="provider_pagerduty"></a> [pagerduty](#provider\_pagerduty) | 3.15.1 |
 
 ## Modules
@@ -36,7 +36,7 @@ No modules.
 ## Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [pagerduty_business_service.workload](https://registry.terraform.io/providers/PagerDuty/pagerduty/latest/docs/resources/business_service) | resource |
 | [pagerduty_extension.critical](https://registry.terraform.io/providers/PagerDuty/pagerduty/latest/docs/resources/extension) | resource |
 | [pagerduty_extension.nonprod](https://registry.terraform.io/providers/PagerDuty/pagerduty/latest/docs/resources/extension) | resource |
@@ -63,7 +63,7 @@ No modules.
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_customer_name"></a> [customer\_name](#input\_customer\_name) | Customer Name | `string` | n/a | yes |
 | <a name="input_slack_engineering_critical_channel"></a> [slack\_engineering\_critical\_channel](#input\_slack\_engineering\_critical\_channel) | The Slack channel ID for critical engineering alerts | `string` | n/a | yes |
 | <a name="input_slack_engineering_nonprod_channel"></a> [slack\_engineering\_nonprod\_channel](#input\_slack\_engineering\_nonprod\_channel) | The Slack channel ID for non-prod engineering alerts | `string` | n/a | yes |
@@ -74,7 +74,7 @@ No modules.
 ## Outputs
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | <a name="output_critical_datadog_integration_key"></a> [critical\_datadog\_integration\_key](#output\_critical\_datadog\_integration\_key) | PagerDuty Datadog Integration for critiacl alerts |
 | <a name="output_critical_datadog_mention"></a> [critical\_datadog\_mention](#output\_critical\_datadog\_mention) | PagerDuty Service Mention with proper formatting |
 | <a name="output_critical_service_id"></a> [critical\_service\_id](#output\_critical\_service\_id) | PagerDuty service ID for critical alerts |
