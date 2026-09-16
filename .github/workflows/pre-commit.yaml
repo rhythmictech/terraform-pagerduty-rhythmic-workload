@@ -13,13 +13,17 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Set up Python
-        uses: actions/setup-python@e9aba2c848f5ebd159c070c61ea2c4e2b122355e # v2
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
       - name: Install prerequisites
         run: ./bin/install-ubuntu.sh
       - name: initialize Terraform
         run: terraform init --backend=false
+      - name: Install pre-commit
+        run: pip install pre-commit
       - name: pre-commit
-        uses: pre-commit/action@9b88afc9cd57fd75b655d5c71bd38146d07135fe # v2.0.3
+        # Run pre-commit directly rather than through pre-commit/action: its
+        # nested actions/cache@v4 is rejected by the org SHA-pin ruleset.
+        run: pre-commit run --all-files --show-diff-on-failure
         env:
           AWS_DEFAULT_REGION: us-east-1
           # many of these are covered by better reviewdog linters below

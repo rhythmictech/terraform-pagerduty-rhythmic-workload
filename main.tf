@@ -47,28 +47,32 @@ resource "pagerduty_service_dependency" "workload" {
 # events and PagerDuty returned the 19 below. Declaring the full set makes the
 # resource converge instead of fighting the API.
 #
+# The list is in the order PagerDuty returns it. Provider releases before 3.24.0
+# model config.events as a list, so any other order plans a perpetual in-place
+# update; from 3.24.0 it is a set and the order is ignored.
+#
 # If PagerDuty adds another event type, the same diff reappears and the fix is to
 # add it here. Never "resolve" it by letting the apply remove events.
 locals {
   slack_connection_events = [
-    "incident.acknowledged",
-    "incident.conference_bridge.updated",
-    "incident.custom_field_values.updated",
-    "incident.delegated",
-    "incident.escalated",
+    "incident.triggered",
+    "incident.responder.replied",
     "incident.priority_updated",
     "incident.reassigned",
-    "incident.reopened",
-    "incident.resolved",
     "incident.responder.added",
-    "incident.responder.replied",
-    "incident.service_updated",
+    "incident.reopened",
+    "incident.acknowledged",
+    "incident.delegated",
     "incident.status_update_published",
-    "incident.title_updated",
-    "incident.triggered",
+    "incident.resolved",
     "incident.unacknowledged",
+    "incident.escalated",
+    "incident.conference_bridge.updated",
+    "incident.service_updated",
+    "incident.custom_field_values.updated",
     "incident.urgency_updated",
-    "incident.workflow.completed",
+    "incident.title_updated",
     "incident.workflow.started",
+    "incident.workflow.completed",
   ]
 }
